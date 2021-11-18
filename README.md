@@ -5,51 +5,50 @@ When using `${revision}` or `${sha1}` in `<pluginManagement>` and `<flattenMode>
 
 ### Maven config
 ```
-    <properties>
-        <sha1/>
-        <revision>1.0.0</revision>
-    </properties>
+<properties>
+    <sha1/>
+    <revision>1.0.0</revision>
+</properties>
 ```
 ```
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.example</groupId>
-                    <artifactId>flatten-bug-plugin</artifactId>
-                    <version>${revision}${sha1}-SNAPSHOT</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
+...
+<pluginManagement>
+    <plugins>
+        <plugin>
+            <groupId>org.example</groupId>
+            <artifactId>flatten-bug-plugin</artifactId>
+            <version>${revision}${sha1}-SNAPSHOT</version>
+        </plugin>
+    </plugins>
+</pluginManagement>
+<plugins>
+    <plugin>
+        <groupId>org.example</groupId>
+        <artifactId>flatten-bug-plugin</artifactId>
+        <version>${revision}${sha1}-SNAPSHOT</version>
+    </plugin>
+</plugins>
+...
+<dependencies>
+    <dependency>
+        <groupId>org.example</groupId>
+        <artifactId>flatten-bug-plugin</artifactId>
+        <version>${revision}${sha1}-SNAPSHOT</version>
+    </dependency>
+</dependencies>
+...
 ```
 
 ### Expected result
 ```
-<build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.example</groupId>
-                    <artifactId>flatten-bug-plugin</artifactId>
-                    <version>1.0.0-SNAPSHOT</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
+<groupId>org.example</groupId>
+<artifactId>flatten-bug-plugin</artifactId>
+<version>1.0.0-SNAPSHOT</version>
 ```
 
 ### Actual result
 ```
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.example</groupId>
-          <artifactId>flatten-bug-plugin</artifactId>
-          <version>${revision}${sha1}-SNAPSHOT</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
+<groupId>org.example</groupId>
+<artifactId>flatten-bug-plugin</artifactId>
+<version>${revision}${sha1}-SNAPSHOT</version>
 ```

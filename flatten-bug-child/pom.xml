@@ -29,6 +29,21 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.example</groupId>
+                <artifactId>flatten-bug-plugin</artifactId>
+                <version>${revision}${sha1}-SNAPSHOT</version>
+            </plugin>
+        </plugins>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>flatten-bug-plugin</artifactId>
+            <version>${revision}${sha1}-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
