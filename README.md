@@ -1,7 +1,7 @@
 # maven-flatten-bug
 ### Mini repo to reproduce bug in maven-flatten-plugin
 
-When using `${revision}` or `${sha1}` in `<pluginManagement>` and `<flattenMode>resolveCiFriendliesOnly</flattenMode>`. They do not get replaced.
+When using `${revision}` or `${sha1}` in child module with `<flattenMode>resolveCiFriendliesOnly</flattenMode>`. They do not get replaced.
 
 ### Maven config
 ```

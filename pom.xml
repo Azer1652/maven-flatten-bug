@@ -16,7 +16,7 @@
 
     <properties>
         <sha1/>
-        <revision>1.0.0</revision>
+        <revision>2.0.0</revision>
     </properties>
 
     <build>
