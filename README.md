@@ -47,6 +47,7 @@ When using `${revision}` or `${sha1}` in child module with `<flattenMode>resolve
 ```
 
 ### Actual result
+[https://github.com/Azer1652/maven-flatten-bug/blob/main/flatten-bug-child/.flattened-pom.xml](https://github.com/Azer1652/maven-flatten-bug/blob/main/flatten-bug-child/.flattened-pom.xml)
 ```
 <groupId>org.example</groupId>
 <artifactId>flatten-bug-plugin</artifactId>
