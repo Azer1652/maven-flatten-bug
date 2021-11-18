@@ -21,7 +21,7 @@
         <plugin>
           <groupId>org.example</groupId>
           <artifactId>flatten-bug-plugin</artifactId>
-          <version>${revision}-SNAPSHOT</version>
+          <version>${revision}${sha1}-SNAPSHOT</version>
         </plugin>
       </plugins>
     </pluginManagement>
